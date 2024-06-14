@@ -1,0 +1,37 @@
+﻿<div class="container">
+    <h1 class="text-center display-2 fw-bold text-primary">Add a New Product</h1>
+    <form method="post" asp-action="Add">
+        <div class="mb-3">
+            <label for="pname" class="form-label">Product name</label>
+            <input type="text" name="pname" class="form-control" id="pname">
+
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <input type="text" name="desc" class="form-control" id="desc">
+
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" name="price" class="form-control" id="price">
+
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary text-center">Add Product</button>
+    </form>
+
+    <div>
+
+        <h4 class="text-center display-1 text-primary">View Data</h4>
+        <h4 class="text-center display-4 text-secondary"> Product name: @ViewData["pname"]</h4>
+        <h4 class="text-center display-4 text-secondary"> Product description: @ViewData["desc"]</h4>
+        <h4 class="text-center display-4 text-secondary"> Product price: @ViewData["price"]</h4>
+    </div>
+    <div>
+
+        <h4 class="text-center display-1 text-primary">View Bag</h4>
+        <h4 class="text-center display-4 text-secondary"> Product name: @ViewBag.pname</h4>
+        <h4 class="text-center display-4 text-secondary"> Product description:  @ViewBag.desc</h4>
+        <h4 class="text-center display-4 text-secondary"> Product price:  @ViewBag.price</h4>
+    </div>
+</div>
